@@ -2,22 +2,52 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
-	.important {
-		font-weight: bold;
+	/* CSS styles for button */
+	.button-style {
+		background-color: #3d9970 !important; /* Dark green color */
+		color: white;
+		padding: 16px 32px !important; /* Larger padding for CTA effect */
+		border: none !important;
+		cursor: pointer;
+		border-radius: 4px;
+		font-size: 18px; /* Larger font size for CTA button */
+		margin-top: 16px; /* Add space below text input */
+		width: 100%; /* Button width stretches to 100% */
 	}
-	 .table-style {
-      border: 1px solid black;
-    }
+	
+	/* Hover style for button */
+	.button-style:hover {
+		background-color: #2e7d5e !important;
+		/* Slightly darker green on hover */
+	}
+	
+	 
+        /* Style for the input */
+        .input-style {           
+            padding: 8px;
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 4px;
+            font-size: 16px; /* Font size for text input */
+            width: 100%;
+        }
+        
+        
 	</ui:style>
+	<!-- UI Binder XML -->
+	<!-- UI Binder XML -->
 	<g:HTMLPanel>
-		<h2>
+		<h1 class="page-title">Clinic Scheduler</h1>
+		<h2 class="welcome-heading">
 			Welcome
-			<span ui:field="doctorNameLabel"></span>
+			<span ui:field="doctorNameLabel" class="table-header"></span>
 		</h2>
-		<g:HorizontalPanel>
-			<g:TextBox ui:field="patientNameTextBox" />
-			<g:Button ui:field="addPatientButton">Add Patient</g:Button>
-		</g:HorizontalPanel>
-		 <g:FlexTable styleName="{style.table-style}" ui:field="patientTable" />
+		<div class="table-container">
+			<div class="input-button-container">
+				<g:TextBox styleName="{style.input-style}" ui:field="patientNameTextBox" />
+				<g:Button styleName="{style.button-style}" ui:field="addPatientButton">Add Patient</g:Button>
+			</div>
+			<g:FlexTable styleName="table-style"
+				ui:field="patientTable" />
+		</div>
 	</g:HTMLPanel>
 </ui:UiBinder> 

@@ -16,6 +16,12 @@ import com.google.gwt.user.client.ui.Hyperlink;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 
+import com.google.gwt.user.cellview.client.TextColumn;
+
+import com.google.gwt.cell.client.DateCell;
+import com.google.gwt.user.datepicker.client.DateBox;
+import com.google.gwt.user.datepicker.client.DateBox.Format;
+
 public class PatientListView extends Composite {
 
 	interface PatientListViewUiBinder extends UiBinder<Widget, PatientListView> {
@@ -58,10 +64,14 @@ public class PatientListView extends Composite {
 		patientTable.setText(rowIndexToInsert, 1, patientNameTextBox.getValue());
 //		patientTable.setText(rowIndexToInsert, 2, "Book Appointment");
 		// add click handler for the appointment cell
-		Anchor bookAppointmentLink = new Anchor("Book Appointment");
-		bookAppointmentLink.addClickHandler(ce -> Window.alert("I am clicked"));
+//		Anchor bookAppointmentLink = new Anchor("Book Appointment");
+//		bookAppointmentLink.addClickHandler(ce -> Window.alert("I am clicked"));
 		
-		 patientTable.setWidget(rowIndexToInsert, 2, bookAppointmentLink );
+		// Create a DateCell with custom format
+        
+        DateBox dateBox = new DateBox();
+        
+		 patientTable.setWidget(rowIndexToInsert, 2, dateBox );
 	}
 
 

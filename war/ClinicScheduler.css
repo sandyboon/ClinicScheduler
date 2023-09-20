@@ -1,34 +1,73 @@
-/** Add css rules here for your application. */
-
-
-/** Example rules used by the template application (remove for your app) */
-h1 {
-  font-size: 2em;
-  font-weight: bold;
-  color: #777777;
-  margin: 40px 0px 70px;
-  text-align: center;
+/* PatientListView.css */
+body {
+	background-color: #f4f7ec; /* Pale green background */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
 }
 
-.sendButton {
-  display: block;
-  font-size: 16pt;
+/* Style for the table container */
+.table-container {
+	background-color: #ffffff; /* White background */
+	border-radius: 8px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+	padding: 16px;
+	width: 80%; /* Adjust the width as needed */
+	max-width: 800px; /* Set a maximum width */
+	margin-top: 16px;
 }
 
-/** Most GWT widgets already have a style name defined */
-.gwt-DialogBox {
-  width: 400px;
+/* Style for the h1 heading */
+.page-title {
+	font-size: 32px; /* Larger font size */
+	color: #333; /* Dark gray color */
+	margin: 0; /* Remove default margin */
+	text-align: center;
+	padding: 16px 0; /* Add vertical spacing */
 }
 
-.dialogVPanel {
-  margin: 5px;
+/* Style for the h2 heading */
+.welcome-heading {
+	font-size: 24px; /* Larger font size */
+	color: #3d9970; /* Dark green color */
+	text-align: center;
 }
 
-.serverResponseLabelError {
-  color: red;
+/* Style for the input and button container */
+.input-button-container {
+	display: flex;
+	flex-direction: column; /* Stack items vertically */
+	justify-content: space-between;
+	height: 100%; /* Make the container take up the entire height */
 }
 
-/** Set ids using widget.getElement().setId("idOfElement") */
-#closeButton {
-  margin: 15px 6px 6px;
+/* Style for the "Add Patient" button */
+z /* Style for text input */ 
+input[type="text"] {
+	padding: 8px;
+	width: 100%;
+	border: 1px solid #ccc; /* Light gray border */
+	border-radius: 4px;
+	font-size: 16px; /* Font size for text input */
+}
+
+/* Style for even rows in the table */
+.table-even-row {
+	background-color: #edf7e3; /* Pale green background */
+}
+
+/* Style for odd rows in the table */
+.table-odd-row {
+	background-color: #e4f1d1; /* Slightly darker pale green background */
+}
+
+/* Style for the table */
+table {
+	width: 100%; /* Table stretches to 100% of parent width */
+	table-layout: fixed; /* Equal-width columns */
+	border-collapse: separate;
+	border-spacing: 10px; /* Add space between table columns */
 }
